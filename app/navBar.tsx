@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect} from "react";
+import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useState, useEffect } from "react";
 
 export default function NavBar() {
   let [isOpen, setIsOpen] = useState(false);
@@ -27,7 +29,7 @@ export default function NavBar() {
   });
 
   return (
-    <nav className="fixed z-20 flex w-screen flex-co p-1 px-4 text-darkText shadow-md shadow-[#272727] md:flex-row md:items-center md:justify-between lg:px-10">
+    <nav className="fixed z-20 flex w-screen flex-co p-1 px-4 text-darkText bg-dark shadow-md shadow-[#272727] md:flex-row md:items-center md:justify-between lg:px-10">
       <div className="flex flex-row items-center justify-between">
         <Link
           href="/"
@@ -58,7 +60,7 @@ export default function NavBar() {
         }
       >
         <ul className="flex w-full flex-col gap-8 md:flex-row md:gap-2 ">
-          <h4 className="px-8  text-[35px]">MGWebs</h4>
+          <h4 className="px-8  text-[35px] text-primary">MGWebs</h4>
           <div>
             <li className="duration-400  flex w-full  text-[28px] font-bold uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
               <Link
@@ -73,7 +75,7 @@ export default function NavBar() {
               <Link
                 onClick={() => setIsOpen(!isOpen)}
                 href="#about"
-                className=" block w-full px-8 py-4"
+                className=" block w-full px-8 py-4 pointer-events-none"
               >
                 About
               </Link>
@@ -82,7 +84,7 @@ export default function NavBar() {
               <Link
                 onClick={() => setIsOpen(!isOpen)}
                 href="#tools"
-                className=" block w-full px-8 py-4"
+                className=" block w-full px-8 py-4 pointer-events-none"
               >
                 Tools
               </Link>
@@ -91,10 +93,28 @@ export default function NavBar() {
               <Link
                 onClick={() => setIsOpen(!isOpen)}
                 href="#Contact"
-                className=" block w-full px-8 py-4"
+                className=" block w-full px-8 py-4 pointer-events-none"
               >
                 Contact
               </Link>
+            </li>
+            <li>
+              <div className="flex justify-evenly">
+                <Link target="_blank" href="mailto:mikeygeraghty@gmail.com">
+                  <div className="flex flex-col items-center shadow-sm shadow-primary rounded-full p-4">
+                    <FontAwesomeIcon icon={faMailBulk} className="w-5" />
+                    {/* <span className="text-[14px]">E-mail</span> */}
+                  </div>
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/michaeldanielgeraghty/"
+                >
+                  <div className="flex flex-col items-center shadow-sm active:shadow-primary rounded-full p-4">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </div>
+                </Link>
+              </div>
             </li>
           </div>
         </ul>
@@ -108,22 +128,22 @@ export default function NavBar() {
             </Link>
           </li>
           <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all  ease-in-out hover:bg-darkText hover:text-primary">
-            <Link href="#about" className=" ">
+            <Link href="#about" className="pointer-events-none ">
               About
             </Link>
           </li>
           <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
-            <Link href="#tools" className=" ">
+            <Link href="#tools" className="pointer-events-none ">
               Tools
             </Link>
           </li>
           <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
-            <Link href="#projects" className=" ">
+            <Link href="#projects" className="pointer-events-none ">
               Projects
             </Link>
           </li>
           <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
-            <Link href="#contact" className=" ">
+            <Link href="#contact" className="pointer-events-none ">
               Contact
             </Link>
           </li>

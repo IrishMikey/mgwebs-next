@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MGWebs",
   description:
-    "is a web development studio specializing in creating customized digital solutions. We offer web design, application development, and website optimization services. Contact us to take your online presence to the next level!",
+    "Web development - specializing in creating customized digital solutions. We offer web design, application development, and website optimization services. Contact us to take your online presence to the next level!",
 };
 
 export default function RootLayout({
