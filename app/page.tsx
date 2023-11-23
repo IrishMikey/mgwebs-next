@@ -1,7 +1,6 @@
-import { faMailBulk, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
-  faMailchimp,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -62,41 +61,40 @@ export default function Home() {
           <div>
             <span className="text-[20px]">Lets work together 🏗️</span>
           </div>
-        </section>
-        <section className="flex flex-col">
-          <div className="flex flex-col">
-            <ul className="flex flex-col">
-              <li>
+          <div className="flex flex-col items-center">
+            <ul className="flex flex-col w-[60vw] gap-1 bg-secondary">
+              <li  className="flex justify-between  py-3 rounded px-2">
                 <Link
-                  className="flex hover:text-primary active:text-primary flex-co items-center"
+                  className="flex hover:text-primary active:text-primary flex-co items-center gap-4"
                   href="mailto:mikeygeraghty@gmail.com"
                 >
-                  <FontAwesomeIcon className="text-[42px]" icon={faMailBulk} />
-                  <span className="text-[32px]">Email</span>
+                  <FontAwesomeIcon className="text-[25px]" icon={faEnvelope} />
+                  <span className="text-[20px]">Email</span>
                 </Link>
               </li>
-              <li>
+              <li className="flex justify-between   py-3 rounded px-2">
                 <Link
-                  className="flex hover:text-primary active:text-primary flex-co items-center"
+                  className="flex hover:text-primary active:text-primary flex-co items-center gap-4"
                   href="https://x.com/michaeldgeraghty"
                 >
-                  <FontAwesomeIcon icon={faXTwitter} />
-                  <span>Twitter</span>
+                  <FontAwesomeIcon className="text-[25px]"  icon={faXTwitter} />
+                  <span className="text-[20px]" >Twitter</span>
                 </Link>
               </li>
-              <li>
+              <li className="flex justify-between  py-3 rounded px-2">
                 <Link
-                  className="flex hover:text-primary active:text-primary flex-co items-center"
+                  className="flex hover:text-primary active:text-primary flex-co items-center gap-4"
                   href="https://linkedin.com/in/michaeldanielgeraghty"
                   target="_blank"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                  <span>LinkedIn</span>
+                  <FontAwesomeIcon className="text-[25px]"  icon={faLinkedin} />
+                  <span className="text-[20px]" >LinkedIn</span>
                 </Link>
               </li>
             </ul>
           </div>
         </section>
+        <section className="flex flex-col"></section>
       </article>
     </main>
   );
