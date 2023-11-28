@@ -80,7 +80,7 @@ export default function NavBar() {
                 About
               </Link>
             </li>
-            <li className="duration-400  flex w-full  text-[28px] font-bold uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
+            {/* <li className="duration-400  flex w-full  text-[28px] font-bold uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
               <Link
                 onClick={() => setIsOpen(!isOpen)}
                 href="#tools"
@@ -88,11 +88,11 @@ export default function NavBar() {
               >
                 Tools
               </Link>
-            </li>
+            </li> */}
             <li className="duration-400  flex w-full text-[28px] font-bold uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
               <Link
                 onClick={() => setIsOpen(!isOpen)}
-                href="#Contact"
+                href="#contact"
                 className=" block w-full px-8 py-4 pointer-events-none"
               >
                 Contact
@@ -127,16 +127,16 @@ export default function NavBar() {
               Home
             </Link>
           </li>
-          <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all  ease-in-out hover:bg-darkText hover:text-primary">
+          {/* <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all  ease-in-out hover:bg-darkText hover:text-primary">
             <Link href="#about" className="pointer-events-none ">
               About
             </Link>
-          </li>
-          <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
+          </li> */}
+          {/* <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
             <Link href="#tools" className="pointer-events-none ">
               Tools
             </Link>
-          </li>
+          </li> */}
           <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
             <Link href="#projects" className="pointer-events-none ">
               Projects
