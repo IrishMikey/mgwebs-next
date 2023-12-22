@@ -5,30 +5,47 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="font-inter flex flex-col p-4 pt-[46px] lg:items-center ">
-      <article className="flex min-h-[90svh] flex-col gap-6 xl:w-[1024px] xl:gap-16">
-        <section id="backToTop" className="flex flex-col gap-7">
-          <div className="flex flex-col  py-8 lg:flex">
-            <h1 className="text-[36px] font-bold text-primary">MGWebs</h1>
-            <h2 className="text-[26px]">Web development.</h2>
+    <main className="font-inter flex flex-col p-4 pt-[46px] lg:items-center lg:px-10">
+      <article className="flex flex-col justify-center md:flex-row min-h-[90svh] md:items-center gap-6] xl:max-w-[1024px] xl:gap-16">
+        <section id="backToTop" className="flex flex-col md:flex-1 gap-7">
+          <div className="flex flex-col">
+            <h1 className="text-[36px] ">Michael Geraghty</h1>
+            <h2 className="text-[26px] font-bold ">Web developer.</h2>
+          </div>
+          <div className="md:flex gap-4 hidden">
+            <Link href="#projects">
+              <button className="rounded bg-primary px-4 md:py-2 text-[22px] font-bold hover:bg-dark hover:text-secondary">
+                My work
+              </button>
+            </Link>
+            
+            <Link href="#contact">
+              <button className="rounded border border-primary px-4 py-2 text-[22px] font-bold hover:bg-primary hover:text-[white]">
+                Contact
+              </button>
+            </Link>
           </div>
         </section>
-        <section className="flex flex-1 flex-col gap-4">
-          <div className="max-w-[83vw] xl:w-[80%]">
-            <span className="text-[26px] xl:text-[28px]">
-              Discover sleek and functional web solutions, the perfect blend of
-              creativity with code to craft seamless online experiences.
+        <section className="flex md:flex-1 flex-col gap-7">
+            <span className="text-[26px] xl:text-[28px] leading-10">
+            Elevate your online presence with expert <b>web development</b>, <b>stunning design</b>, seamless functionality, and tailored solutions for your <b>success</b>
             </span>
-          </div>
-          <div>
+            <div className="flex gap-4 md:hidden">
+            <Link href="#projects">
+              <button className="rounded bg-primary px-4 py-2 text-[22px] font-bold hover:bg-dark hover:text-secondary">
+                My work
+              </button>
+            </Link>
+            
             <Link href="#contact">
-              <button className="rounded border-secondary bg-primary px-4 py-2 text-[22px] font-bold text-dark hover:bg-dark hover:text-secondary">
+              <button className="rounded border border-primary px-4 py-2 text-[22px] font-bold hover:bg-primary hover:text-[white]">
                 Contact
               </button>
             </Link>
           </div>
         </section>
       </article>
+
       <article
         id="projects"
         className="flex min-h-[94svh] flex-col gap-6 xl:w-[1024px]"

@@ -29,7 +29,8 @@ export default function NavBar() {
   });
 
   return (
-    <nav className="flex-co text-darkText fixed z-20 flex w-screen bg-dark p-1 px-4 shadow-md shadow-[#272727] md:flex-row md:items-center md:justify-between lg:px-10">
+    <nav className="flex-co xl:justify-center text-darkText fixed z-20 flex w-screen bg-dark p-1 px-4 shadow-md md:flex-row md:items-center md:justify-between lg:px-10">
+      <div className=" w-full xl:w-[1024px] md:flex md:justify-between">
       <div className="flex flex-row items-center justify-between">
         <Link
           href="/"
@@ -52,6 +53,39 @@ export default function NavBar() {
           )}
         </div>
       </div>
+      
+      {/* Nav */}
+      <div className="h-full ">
+        <ul className="hidden h-full gap-2 md:flex md:flex-row md:justify-between lg:gap-8  ">
+          <li className="duration-600  hover:bg-darkText flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in hover:text-primary">
+            <Link href="#backToTop" onClick={() => setTitleFontSize(36)}>
+              Home
+            </Link>
+          </li>
+          {/* <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all  ease-in-out hover:bg-darkText hover:text-primary">
+            <Link href="#about" className=" ">
+              About
+            </Link>
+          </li> */}
+          {/* <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
+            <Link href="#tools" className=" ">
+              Tools
+            </Link>
+          </li> */}
+          <li className="duration-400  hover:bg-darkText flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:text-primary">
+            <Link href="#projects" className=" ">
+              Projects
+            </Link>
+          </li>
+          <li className="duration-400  hover:bg-darkText flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:text-primary">
+            <Link href="#contact" className=" ">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
+      </div>
+
       {/* Moblie nav */}
       <div
         className={
@@ -117,36 +151,6 @@ export default function NavBar() {
               </div>
             </li>
           </div>
-        </ul>
-      </div>
-      {/* Nav */}
-      <div className="h-full">
-        <ul className="hidden h-full gap-2 md:flex md:flex-row md:justify-between lg:gap-8  ">
-          <li className="duration-600  hover:bg-darkText flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in hover:text-primary">
-            <Link href="#backToTop" onClick={() => setTitleFontSize(36)}>
-              Home
-            </Link>
-          </li>
-          {/* <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all  ease-in-out hover:bg-darkText hover:text-primary">
-            <Link href="#about" className=" ">
-              About
-            </Link>
-          </li> */}
-          {/* <li className="duration-400  flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:bg-darkText hover:text-primary">
-            <Link href="#tools" className=" ">
-              Tools
-            </Link>
-          </li> */}
-          <li className="duration-400  hover:bg-darkText flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:text-primary">
-            <Link href="#projects" className=" ">
-              Projects
-            </Link>
-          </li>
-          <li className="duration-400  hover:bg-darkText flex h-full w-full items-center p-2 text-[18px] font-medium uppercase transition-all ease-in-out hover:text-primary">
-            <Link href="#contact" className=" ">
-              Contact
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>
